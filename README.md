@@ -1,24 +1,70 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# microblog
 
-Things you may want to cover:
+> microblog is a Blog app built with ruby on rails. It enables people to vent out. It shows the list of posts and empower readers to interact with them by adding comments and liking posts
 
-* Ruby version
+## [Live link]()
+coming soon!
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby on Rails
 
-* Database creation
+To get a local copy up and running follow these simple example steps.
 
-* Database initialization
 
-* How to run the test suite
+### Setup
+To get a copy of this project follow the steps below
+- clone this project/download the zip file:
+```
+git clone git@github.com:Tchilo/microblog.git
+cd microblog
+```
+- To see the blog live on your computer run the following in the terminal:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rails s
+```
 
-* Deployment instructions
+### running tests
+Enter this in the terminal:
+```
+rspec
+```
 
-* ...
+### Usage
+in the terminal you can run the code below
+```
+npm start
+```
+### Run tests
+Coming soon
+
+### Deployment
+Coming soon
+
+
+
+## Author
+
+👤 **Tchilo**
+
+- GitHub: [@Tchilo](https://github.com/Tchilo)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
+
+
