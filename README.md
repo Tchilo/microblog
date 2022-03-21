@@ -33,13 +33,11 @@ Enter this in the terminal:
 rspec
 ```
 
-### Usage
-in the terminal you can run the code below
-```
-npm start
-```
+
 ### Run tests
-Coming soon
+```
+rspec
+```
 
 ### Deployment
 Coming soon
@@ -66,5 +64,6 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
 
 
