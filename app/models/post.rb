@@ -7,7 +7,6 @@ class Post < ApplicationRecord
 
   def return_last_five_comments
     comments.order('created_at Desc').limit(3)
-
   end
 
   private
