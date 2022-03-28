@@ -7,6 +7,6 @@ class Comment < ApplicationRecord
   private
 
   def update_post_comment_count
-    posts.increment!(:comments_counter)
+    comments.order('created_at Desc').limit(5)
   end
 end
