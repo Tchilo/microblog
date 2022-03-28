@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
 
-  after_save: update_user_post_counter
+  after_save :update_user_post_counter
 
   def return_last_five_comments
     comments.last(5)
@@ -14,5 +14,4 @@ class Post < ApplicationRecord
   def update_user_post_counter
     user.increment!(:posts_counter)
   end
-
 end
