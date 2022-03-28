@@ -9,5 +9,4 @@ class Comment < ApplicationRecord
   def update_post_comment_count
     comments.order('created_at Desc').limit(5)
   end
-
 end
