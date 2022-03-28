@@ -8,6 +8,6 @@ class User < ApplicationRecord
   end
 
   def current_user
-    users.find(1)
-  end
+    users.first
+    end
 end

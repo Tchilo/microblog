@@ -2,8 +2,13 @@ class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :post
 
-  def ads_counter
-    comment_counter += 1  
+  after_save: update_post_comment_count
+
+  private
+
+  def update_post_comment_count
+    post.comments_counter += 1
+    posts.increment!(:comments_counter)
   end
-comment_counter.increment!(:ads_counter)
+
 end
