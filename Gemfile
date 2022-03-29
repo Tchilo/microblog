@@ -65,6 +65,8 @@ group :development do
   # gem "spring"
 end
 
+gem 'htmlbeautifier'
+
 gem 'rails-controller-testing'
 
 group :development, :test do
