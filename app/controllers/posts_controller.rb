@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     add_post = @user.posts.new(post_params)
     add_post.comments_counter = 0
-    add_post.likes_counters = 0
+    add_post.likes_counter = 0
     respond_to do |format|
       format.html do
         if add_post.save

@@ -60,3 +60,14 @@ ul li {
 .comment {
   background-color: #ddd;
 }
+
+.btn {
+  padding: 12px 14px;
+  font-size: 16px;
+  border: none;
+  background: #777;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 20px;
+}
