@@ -5,7 +5,7 @@ class LikesController < ApplicationController
     if like.save!
       flash[:success] = 'like added'
     else
-      flash[:error] ='like was not added'
+      flash[:error] = 'like was not added'
     end
     redirect_to user_post_url
   end

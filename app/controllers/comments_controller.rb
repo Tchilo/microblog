@@ -4,13 +4,15 @@ class CommentsController < ApplicationController
     comment = current_user.comments.new(comment_params)
     comment.post = post
     if comment.save!
-      flash[:success]= "Your comment was added"
+      flash[:success] = 'Your comment was added'
     else
-      flash[:error] = "Your comment was not added"
+      flash[:error] = 'Your comment was not added'
     end
     redirect_to user_post_path
   end
-private
+
+  private
+
   def comment_params
     params.permit(:text)
   end
