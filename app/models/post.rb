@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   after_save :update_post_counter
 
   def return_five_comments
-    comment.order('created_at Desc').limit(3)
+    comments.order('created_at Desc').limit(5)
   end
 
   private
