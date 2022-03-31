@@ -32,3 +32,13 @@
           </div>
         </li>      
     </ul>
+
+     <h1>Leave your comment here...</h1>
+  <%= form_with url: new_comment_user_post_path do |form| %>
+    <div class="mb-3">
+      <%= form.text_area :text, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= form.submit class: "btn btn-primary" %>
+    </div>
+  <% end %>
