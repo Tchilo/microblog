@@ -19,14 +19,15 @@ RSpec.describe 'Posts', type: :request do
     end
   end
 
-  describe 'GET #show' do
-    before(:each) { get user_path(2) }
+  describe 'GET /show' do
+  before(:each) { get users_path(1) }
+
     it 'should have a response status code of 200 for success' do
       expect(response).to have_http_status(200)
     end
 
     it 'should render correct template' do
-      expect(response).to render_template(:show)
+      expect(response).to render_template(:index)
     end
 
     it 'should have correct placeholder' do
