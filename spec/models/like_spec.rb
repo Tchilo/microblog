@@ -9,7 +9,6 @@ RSpec.describe Like, type: :model do
 
   user = User.new(name: 'Tom', photo: 'image.png', bio: 'I am programer', posts_counter: 0)
 
-
   before { user.save }
 
   it 'should return most recent comments' do

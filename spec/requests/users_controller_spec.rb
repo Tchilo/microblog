@@ -19,8 +19,8 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET #show' do
-  # user = User.new(name: 'Tom', photo: 'image.png', bio: 'I am programmer')
-  before(:each) { get users_path(1) }
+    # user = User.new(name: 'Tom', photo: 'image.png', bio: 'I am programmer')
+    before(:each) { get users_path(1) }
     it 'should have correct response status' do
       expect(response).to have_http_status(200)
     end

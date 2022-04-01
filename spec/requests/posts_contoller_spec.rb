@@ -20,7 +20,7 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'GET /show' do
-  before(:each) { get users_path(1) }
+    before(:each) { get users_path(1) }
 
     it 'should have a response status code of 200 for success' do
       expect(response).to have_http_status(200)
