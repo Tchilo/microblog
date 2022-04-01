@@ -4,7 +4,7 @@ RSpec.describe Post, type: :model do
   subject do
    user = User.new(name: 'Tom', photo: 'image.png', bio: 'I am programmer', posts_counter: 0)
     Post.new(title: 'Hello world', text: 'Helloworld',
-             likes_counter: nil, comments_counter:0, user:user)
+             likes_counter: 0, comments_counter:0, user:user)
   end
 
   before { subject.save }
@@ -15,11 +15,11 @@ RSpec.describe Post, type: :model do
 
   it 'should have 250 characters' do
     subject.title = 'f' * 300
-    expect(subject).to be_valid
+    expect(subject).to_not be_valid
   end
 
   it 'should be invalid if comment counter is nil' do
-    subject.post.comments_counter = 0
+    subject.comments_counter = nil
     expect(subject).to_not be_valid
   end
 
