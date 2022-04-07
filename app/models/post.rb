@@ -6,7 +6,6 @@ class Post < ApplicationRecord
   after_save :update_post_counter
   after_destroy :update_posts_counter_after_destroy
 
-
   def return_five_comments
     comment.order('created_at Desc').limit(3)
   end

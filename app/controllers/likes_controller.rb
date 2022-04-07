@@ -9,9 +9,8 @@ class LikesController < ApplicationController
     else
       flash[:error] = 'like was not added'
     end
-    redirect_to user_post_path(@post)  end
-
-
+    redirect_to user_post_path(@post)
+  end
 
   # load_and_authorize_resource
 
