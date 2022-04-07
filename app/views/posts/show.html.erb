@@ -27,8 +27,9 @@
             <%= comment.text %> by
             <%= comment.user.name %>
             </div>
+            <% if can? :destroy, comment %>
            <span> <%=button_to 'Delete Comment' , comment, method: :delete, data: { confirm: 'Are you sure?' }%></span>| 
-
+            <% end %>
             <% end %>
             
             </div>

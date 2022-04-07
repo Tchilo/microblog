@@ -10,13 +10,13 @@ class Ability
     can :read, Like
     return unless user.present?
 
-    can :manage , Post user_id: user.id
-    can :manage , Comment user_id: user.id
-    can :manage , Like user_id: user.id
+    can :manage, Post, user_id: user.id
+    can :manage, Comment, user_id: user.id
+    can :manage, Like, user_id: user.id
     return unless user.admin?
 
     can :manage, :all
-  end
+  
 
     # Define abilities for the passed in user here. For example:
     #
