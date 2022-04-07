@@ -1,11 +1,12 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts
+    @posts = @user.posts.includes(:comments)
   end
 
   def show
-    @post = User.find(params[:user_id]).posts.find(params[:id])
+    # @post = User.find(params[:user_id]).posts.find(params[:id])
+    @post = User.find(params[:user_id]).posts.includes(:comments).find(params[:id])
   end
 
   def new
@@ -30,6 +31,14 @@ class PostsController < ApplicationController
         end
       end
     end
+  end
+
+  def destroy
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:id])
+    @post.destroy
+    flash[:success] = 'Post deleted successfully'
+    redirect_to root_url
   end
 
   private

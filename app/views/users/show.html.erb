@@ -24,6 +24,8 @@
     <ul>
       <% @user.return_three_posts.each do |post| %>
         <li>
+        <%= button_to 'Delete Post' , user_post_path(@user, post), method: :delete, data: { confirm: 'Are you sure?' } %>
+
           <div class='post-card'>
             <div>
               <h3>
