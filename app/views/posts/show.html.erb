@@ -20,14 +20,15 @@
               </span>
             </div>
             <div class="comment">
-            
+            <%= button_to 'Add Like', like_post_user_post_url(@post), method: "put" %>
             
             <% @post.comments.each do |comment| %>
               <div>
             <%= comment.text %> by
             <%= comment.user.name %>
             </div>
-           <span> <%=button_to 'Delete Comment' , comment, method: :delete, data: { confirm: 'Are you sure?' }%></span>
+           <span> <%=button_to 'Delete Comment' , comment, method: :delete, data: { confirm: 'Are you sure?' }%></span>| 
+
             <% end %>
             
             </div>
