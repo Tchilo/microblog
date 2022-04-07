@@ -23,9 +23,11 @@
             
             
             <% @post.comments.each do |comment| %>
-              <p>
-            <%= comment.text %>
-            </p>
+              <div>
+            <%= comment.text %> by
+            <%= comment.user.name %>
+            </div>
+           <span> <%=button_to 'Delete Comment' , comment, method: :delete, data: { confirm: 'Are you sure?' }%></span>
             <% end %>
             
             </div>

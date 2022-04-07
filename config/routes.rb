@@ -7,4 +7,6 @@ Rails.application.routes.draw do
       post "like_post", to: "likes#create", on: :member
     end
   end
+
+  resources :comments, only: [:destroy]
 end
