@@ -6,6 +6,21 @@
   text-decoration: none;
 }
 
+button {
+  background-color: #e71d36;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 9px;
+}
+
 .logo {
   font-size: 30px;
   color: #fff;
@@ -125,4 +140,17 @@ ul li {
   padding: 12px;
   margin-bottom: 20px;
   border-radius: 8px;
+}
+
+.like-btn {
+  background-color: #2e294e;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.comment {
+  font-size: 20px;
+  margin: 10px;
 }
