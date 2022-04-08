@@ -7,7 +7,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    # @post = User.find(params[:user_id]).posts.find(params[:id])
     @post = User.find(params[:user_id]).posts.includes(:comments).find(params[:id])
     authorize! :read, @post
   end

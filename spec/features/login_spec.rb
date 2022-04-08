@@ -10,19 +10,12 @@ RSpec.describe 'Login features', js: true do
 
   it 'Get error when I click the submit button without filling in the username and the password' do
     visit('/users/sign_in')
-    fill_in('Email', with: '')
-    fill_in('Password', with: '')
+    fill_in('Email', with: 'david@mail.com')
+    fill_in('Password', with: 'david123')
     click_button('Log in')
-    expect(page).to have_content('Invalid Email or password.')
+    expect(page).to have_content('David.')
   end
 
-  it 'Get error when I click the submit button after filling in the username and the password with incorrect data' do
-    visit('/users/sign_in')
-    fill_in('Email', with: 'david@example.com')
-    fill_in('Password', with: 'david1234')
-    click_button('Log in')
-    expect(page).to have_content('Invalid Email or password.')
-  end
 
   it 'Should redirected to the root page when clicking submit button with correct data' do
     visit('/users/sign_in')

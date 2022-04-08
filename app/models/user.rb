@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :likes
   has_many :comments
 
+  validates :email, :password, presence: true
   def return_three_posts
     posts.order('created_at Desc').limit(3)
   end

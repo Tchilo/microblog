@@ -5,24 +5,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-  
-  <nav>
-  <%= link_to 'Microblog', root_path, class: 'logo' %>
-<% if current_user %>
-<%= current_user.name if current_user %>
-<%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
-<% else %> 
-<%= link_to 'Sign in', user_session_path %>
-<% end %>
-</nav> 
-     <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+    <nav>
+      <%= link_to 'Microblog', root_path, class: 'logo' %>
+      <% if current_user %>
+        <%= current_user.name if current_user %>
+        <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Sign in', user_session_path %>
+      <% end %>
+    </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <% if notice.present? %> 
+      <div class="notice"> 
+        <p> <%= notice %> </p>
+ </div>
+ <% end %> <% if alert.present? %> 
+      <div class="alert"> 
+        <p> <%= alert %> </p>
+ </div>
+ <% end %>
     <%= yield %>
   </body>
 </html>

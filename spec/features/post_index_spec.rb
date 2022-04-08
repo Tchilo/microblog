@@ -7,13 +7,14 @@ RSpec.feature 'post index page', js: true, type: :feature do
     image = 'https://images.unsplash.com/photo-1648974299612-679d6fb46816?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
     bio = 'Teacher from Mexico.'
     @jake = User.create!(name: 'Jake', photo: image, bio: bio, posts_counter: 0, email: 'jake@mail.com',
-                          password: 'jake123')
+                         password: 'jake123')
     fill_in 'Email', with: 'jake@mail.com'
     fill_in 'Password', with: 'jake123'
     click_button 'Log in'
 
-    @post = @jake.posts.create!(title: 'programmer', text: 'Iam Programmer I have life', likes_counter: 0, comments_counter: 0)
-                              
+    @post = @jake.posts.create!(title: 'programmer', text: 'Iam Programmer I have life', likes_counter: 0,
+                                comments_counter: 0)
+
     @jake.posts.create!(title: 'Sky', text: 'Why is the sky blue?', likes_counter: 0, comments_counter: 0)
 
     fin = User.create!(name: 'fin', photo: image, bio: bio, posts_counter: 0, email: 'fin@mail.com',
