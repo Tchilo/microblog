@@ -73,6 +73,8 @@ group :development do
 end
 
 gem 'htmlbeautifier'
+gem 'devise-jwt'
+
 
 # group :development, :test do
 #   gem 'rspec-rails', '~> 5.0.0'
