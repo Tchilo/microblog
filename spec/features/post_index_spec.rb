@@ -14,7 +14,6 @@ RSpec.feature 'post index page', js: true, type: :feature do
 
     @post = @jake.posts.create!(title: 'programmer', text: 'Iam Programmer I have life', likes_counter: 0,
                                 comments_counter: 0)
-
     @jake.posts.create!(title: 'Sky', text: 'Why is the sky blue?', likes_counter: 0, comments_counter: 0)
 
     fin = User.create!(name: 'fin', photo: image, bio: bio, posts_counter: 0, email: 'fin@mail.com',
