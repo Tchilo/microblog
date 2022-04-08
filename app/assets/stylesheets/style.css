@@ -150,3 +150,13 @@ ul li {
   font-size: 20px;
   margin: 10px;
 }
+
+.alert {
+  background-color: #e09191;
+  border-radius: 8px;
+  width: 50%;
+}
+
+..notice {
+  background-color: rgb(241, 198, 198);
+}
