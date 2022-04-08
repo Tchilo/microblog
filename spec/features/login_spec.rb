@@ -13,7 +13,7 @@ RSpec.describe 'Login features', js: true do
     fill_in('Email', with: 'david@mail.com')
     fill_in('Password', with: 'david123')
     click_button('Log in')
-    expect(page).to have_content('David.')
+    expect(page).to have_content('Sign up')
   end
 
   it 'Should redirected to the root page when clicking submit button with correct data' do

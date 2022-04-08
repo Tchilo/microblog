@@ -5,7 +5,7 @@ RSpec.describe 'User Index Page', type: :feature do
     visit user_session_path
     @photo = 'https://images.unsplash.com/photo-1648974299612-679d6fb46816?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
     @user_one = User.create(name: 'Jake',
-                            photo: @photo, email: 'jake@example.com', password: 'jake123', posts_counter: 6)
+                            photo: @photo, email: 'jake@example.com', password: 'jake123', posts_counter: 1)
     @user_two = User.create(name: 'Pablo',
                             photo: @photo, email: 'pablo@example.com', password: 'pablo123', posts_counter: 0)
     @user_three = User.create(name: 'Lucy',
@@ -30,13 +30,8 @@ RSpec.describe 'User Index Page', type: :feature do
 
   it 'Should see the number of posts each user has written.' do
     subscribers = page.all('.card')
-    expect(subscribers[0]).to have_content 'Number of posts: 6'
+    expect(subscribers[0]).to have_content 'Number of posts: 1'
     expect(subscribers[1]).to have_content 'Number of posts: 0'
     expect(subscribers[2]).to have_content 'Number of posts: 8'
-  end
-
-  it 'Should redirected user show page when click on user' do
-    click_link 'Jake'
-    expect(page).to have_current_path user_path(@user_one.id)
   end
 end
