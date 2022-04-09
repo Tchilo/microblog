@@ -72,6 +72,7 @@ group :development do
   # gem "spring"
 end
 
+gem 'devise-jwt'
 gem 'htmlbeautifier'
 
 # group :development, :test do

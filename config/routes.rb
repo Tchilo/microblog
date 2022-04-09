@@ -9,5 +9,13 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    namespace :v1 do
+      resources :posts, only: [:index], defaults: {format: :json} do
+        resources :comments, only: [:index, :create]
+      end
+    end
+  end
+  
   resources :comments, only: [:destroy]
 end
