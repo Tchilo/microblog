@@ -27,6 +27,14 @@ cd microblog
 rails s
 ```
 
+### Api endpoints
+```
+- for posts: http://127.0.0.1:3000/api/v1/posts
+-for comments: http://127.0.0.1:3000/api/v1/posts/:post_id/comments
+```
+
+
+
 ### running tests
 Enter this in the terminal:
 ```
